@@ -1,0 +1,27 @@
+countDown
+
+function countdown(num) {
+  let intervalId = setInterval(() => {
+    num--;
+    console.log(num);
+    if (num === 0) {
+      console.log("DONE!");
+      clearInterval(intervalId);
+    }
+  }, 1000);
+}
+
+randomGame
+
+function randomGame() {
+  let counter = 0;
+  const intervalId = setInterval(() => {
+    const randomNumber = Math.random();
+    counter++;
+
+    if (randomNumber > 0.75) {
+      clearInterval(intervalId);
+      console.log(`Number greater than 0.75 found after ${counter} tries.`);
+    }
+  }, 1000);
+}
